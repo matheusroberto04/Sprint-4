@@ -36,40 +36,20 @@ def exibir_informacoes():
                 Por favor, selecione a opção desejada!
            ===================================================
         ''')
-        print('''
-        [1] -> Quais os benefícios de ter o nosso seguro?
-        [2] -> Como faço para contratar um seguro?
-        [3] -> O seguro de bike cobre danos acidentais?
-        [4] -> Existe um limite de idade ou modelo da bicicleta para obter o seguro?
-        [5] -> O que fazer em caso de roubo da bicicleta segurada?
-        [6] -> Sair.
-        ''')
+        with open('opcoes.md',"r", enconding = "utf-8") as file:
+            content = file.read()
+        print(content)
         escolha_faq = int(input("Escolha uma opção: "))
 
         if escolha_faq == 1:
-            print(''' 
-                Com o nosso seguro, você terá diversos benefícios como:
-                -> Desconto de 5% na contratação de mais de uma bike em uma única apólice.
-                -> Seguro de vida, caso haja alguma morte acidental ou invalidez permanente decorrente do acidente.
-                -> Cobrimos as despesas médicas, hospitalares e odontológicas, caso o cliente se envolva em um acidente.
-                -> Cobre o extravio da bicicleta em viagens aéreas ou rodoviárias, durante o trajeto de ida e volta, 
-                desde que esteja com o ticket de embarque.
-
-                -> Pedal Essencial: plano gratuito que oferece reparo e/ou troca de câmaras de ar, correntes, coroas, 
-                manetes de freios, além de lubrificação de correntes.
-
-                -> Pedal Leve: mesmas garantias do plano Pedal Essencial, com um benefício a mais: transporte do 
-                segurado e sua bike em caso de quebra ou acidente, com limite de 50 km.
-
-                -> Pedal Elite: Tem tudo o que o plano Pedal Essencial oferece, com um benefício a mais: transporte 
-                do segurado e sua bike em caso de quebra ou acidente, com limite de 150 km.                  
-            ''')
+            with open('seguro.md',"r", encoding = "utf-8" ) as arquivo:
+                content = file.read()
+            print(content)
 
         elif escolha_faq == 2:
-            print('''
-            Para contratar o nosso serviço, basta entrar em contato com os nossos atendentes através do 
-            nosso site ou pelo WhatsApp 11 3003 9303!
-            ''')
+            with open('contratar.md', "r", encoding = "utf-8") as arquivo:
+                content = file.read()
+            print(content)
 
         elif escolha_faq == 3:
             print(''' Sim! Cobrimos danos como:
